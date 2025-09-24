@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- Cuerpo General nodo html -->
+<html lang="es">
+<!-- Dentro tenemos etiquetas para metadatos o importacion de scripts o css-->
+<head>
+    <!-- Titulo de nuestra pagina -->
+    <title>Clase 4</title>
+</head>
+<!-- Cuerpo de la pagina -> aqui se muestra todo lo visible para el usuario -->
+<body>
+    <div id="caja">
+        Soy un div con id = caja
+    </div>
+
+    <div class="cajaC">
+        Soy un div con una clase cajaC 1
+    </div>
+    <div class="cajaC">
+        Soy un div con una clase cajaC 2
+    </div>
+    <!-- Esto no se puede hacer porque un id es unico en toda la pagina -->
+    <!--
+    <div id="caja">
+    </div>
+    -->
+</body>
+<!-- Podemos tambien agregar estilos desde aqui con la etiqueta style -->
+<style>
+    body {
+        background-color: aqua;
+    }
+
+    /* anteceder # antes del nombre del id */
+    #caja {
+        padding: 10px; /* Espacio interno */
+        margin: 10px; /* Espacio externo */
+        width: 100px;  /* ancho 1px = 1 pixel */
+        height: 100px;  /* alto 1px = 1 pixel */
+        background-color: red;
+    }
+
+    .cajaC {
+        padding: 20px; /* Espacio interno */
+        margin: 30px; /* Espacio externo */
+        width: 100px;  /* ancho 1px = 1 pixel */
+        height: 100px;  /* alto 1px = 1 pixel */
+        background-color: red;
+        border: 5px solid black;
+        border-radius: 50px;
+    }
+
+</style>
+
+</html>
