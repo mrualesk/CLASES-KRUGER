@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Selectores y mas estilos</title>
+</head>
+<body>
+<div class="caja">
+    <h2>Hola mundo</h2>
+    <p>
+        Este es un ejemplo de estilos básicos en un div.
+        Este es otra linea de mi parrafo
+    </p>
+    <div class="elementos">
+        <div>Elemento 1</div>
+        <div>Elemento 2</div>
+        <div>Elemento 3</div>
+    </div>
+
+</div>
+</body>
+<style>
+    html {
+        font-size: 14px;
+    }
+    body {
+        font-size: 10px;
+    }
+    .caja {
+        /* en width y height se puede usar px, %, em, rem */
+        width: 200px; /* ancho */
+        height: auto; /* alto automático según contenido */
+        background-color: aqua; /* color de fondo */
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1em;
+    }
+
+    /* Selector de clases descendente */
+    .caja h2 {
+        color: red;
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+    .caja p {
+        color: green;
+        line-height: 4;
+        word-spacing: 10px;
+        letter-spacing: 2px;
+    }
+
+    .caja:hover {
+        background-color: yellow;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .elementos {
+        height: 50px;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    }
+
+</style>
+
+</html>
