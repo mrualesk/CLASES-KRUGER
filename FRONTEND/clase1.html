@@ -1,3 +1,8 @@
+<html>
+<head>
+    <title>Titulo de mi pagina</title>
+</head>
+<body>
 <!-- Aquí empieza el contenido visible en el navegador -->
 <header><!-- Encabezado del sitio (generalmente logo, menú, etc.) -->
     <h1>Mi Sitio Web</h1>
@@ -10,11 +15,11 @@
     </nav>
 </header>
 <main><!-- Contenido principal de la página -->
-    <section id="inicio"><!-- Sección de inicio -->
+    <section id="inicio" style="height: 500px; background-color: red "><!-- Sección de inicio -->
         <h2>Bienvenido</h2>
         <p>Este es un ejemplo básico de estructura HTML.</p>
     </section>
-    <section id="servicios"><!-- Sección de servicios -->
+    <section id="servicios" style="height: 500px; background-color: yellow "><!-- Sección de servicios -->
         <h2>Nuestros Servicios</h2>
         <article><!-- Un artículo o bloque de contenido -->
             <h3>Diseño Web</h3>
@@ -25,12 +30,15 @@
             <p>Desarrollamos aplicaciones móviles y de escritorio.</p>
         </article>
     </section>
-    <section id="contacto"><!-- Sección de contacto -->
+    <section id="contacto" style="height: 500px; background-color: blue "><!-- Sección de contacto -->
         <h2>Contacto</h2>
         <form><!-- Formulario --> <label for="nombre">Nombre:</label> <input
                 id="nombre" name="nombre" type="text"> <label for="email">Email:</label>
-            <input id="email" name="email" type="email"> <button
-                    type="submit">Enviar</button></form>
+            <input id="email" name="email" type="email">
+            <button
+                    type="submit">Enviar
+            </button>
+        </form>
     </section>
 </main>
 <aside>
@@ -41,3 +49,13 @@
 <footer><!-- Pie de página -->
     <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
 </footer>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+</body>
+
+</html>
