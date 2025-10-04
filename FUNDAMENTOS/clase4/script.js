@@ -12,12 +12,12 @@ function saludoConAlerta () {
 }
 
 function imprimirNumero() {
-    let numero = document.getElementById("numero").value;
+    let numero = Number(document.getElementById("numero").value);
     const suma = numero + 5;
     console.log(suma)
     // alert(numero )
     let etiquetaP = document.getElementById("resultado");
-    etiquetaP.textContent = "El numero es " + numero;
+    etiquetaP.textContent = "El numero ingresado + 5 es igual a " + suma;
 }
 
 
