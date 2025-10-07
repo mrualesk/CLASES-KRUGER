@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Formulario de registro basico</title>
+</head>
+<body>
+<main class="container">
+    <section class="card">
+        <h1>Crear cuenta</h1>
+        <p class="muted">Completa los campos para registrarte</p>
+
+        <form class="form-section" action="#" method="GET">
+            <div class="field">
+                <label for="nombre">Nombre</label>
+                <input
+                        id="nombre"
+                        name="nombre"
+                        type="text"
+                        required
+                        minlength="2"
+                        placeholder="Tu nombre"
+                />
+                <p class="muted">Minimo 2 caracteres</p>
+            </div>
+
+            <div class="field">
+                <label for="correo">Correo</label>
+                <input
+                        id="correo"
+                        name="correo"
+                        required
+                        type="email"
+                        placeholder="tucorreo@ejemplo.com"
+                />
+            </div>
+            <div class="field">
+                <label for="contrasena">Contraseña</label>
+                <input
+                        id="contrasena"
+                        name="contrasena"
+                        type="password"
+                        required
+                        minlength="8"
+                        placeholder="Minimo 8 caracteres"
+                >
+            </div>
+
+            <div class="field">
+                <label for="contrasena2">Contraseña</label>
+                <input
+                        id="contrasena2"
+                        name="contrasena2"
+                        type="password"
+                        required
+                        minlength="8"
+                        placeholder="Repite tu contraña"
+                >
+            </div>
+
+            <div class="actions">
+                <button type="submit">
+                    Registrarme
+                </button>
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+<style>
+    :root {
+        --bg: #f7f7fb;
+        --card: #fff;
+        --muted: #6b7280;
+        --primary: #2563eb;
+        --ring: #93c5fd
+    }
+
+    body {
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 48px auto;
+        padding: 28px;
+    }
+
+    .card {
+        background-color: var(--card);
+        padding: 24px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+    }
+
+    h1 {
+        margin: 0 0 16px
+    }
+
+    .muted {
+        color: var(--muted)
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px
+    }
+
+    .actions {
+        margin: 10px auto;
+    }
+
+    button {
+        background-color: var(--primary);
+        border-radius: 10px;
+        border-color: white;
+        padding: 8px;
+        color: white;
+    }
+
+    button:hover {
+        background-color: var(--ring);
+    }
+
+
+</style>
+</html>
