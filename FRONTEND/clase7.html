@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Posiciones absolutas y relativas</title>
+</head>
+<body>
+<main>
+    <div class="contenedor-principal">
+        <h2 style="color: white">Caja pricipal</h2>
+        <div class="contenedor">
+            <h2 style="color: white">Caja secundaria</h2>
+            <div class="caja">
+                <img src="wpp-icon.svg" width="50" height="50" alt="wpp">
+            </div>
+        </div>
+    </div>
+
+</main>
+</body>
+<style>
+
+    .contenedor-principal {
+        background-color: blue;
+        width: 400px;
+        height: 400px;
+    }
+
+    .contenedor {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+        position: relative;
+    }
+
+    .caja {
+
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        border-radius: 10px;
+    }
+
+</style>
+</html>

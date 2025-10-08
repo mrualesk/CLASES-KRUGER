@@ -3,7 +3,7 @@
 <head>
     <title>Formulario de registro basico</title>
 </head>
-<body>
+<body style="padding: 48px; display: flex; justify-content: center">
 <main class="container">
     <section class="card">
         <h1>Crear cuenta</h1>
@@ -62,12 +62,24 @@
                     Registrarme
                 </button>
             </div>
+            <div class="contenedor-cajas">
+                <div class="caja"></div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+                <div class="caja"></div>
+            </div>
+
         </form>
     </section>
 </main>
 </body>
 <style>
     :root {
+        --text: #070707;
         --bg: #f7f7fb;
         --card: #fff;
         --muted: #6b7280;
@@ -76,12 +88,21 @@
     }
 
     body {
+        margin: 0;
+        padding: 0;
     }
 
     .container {
-        max-width: 400px;
-        margin: 48px auto;
+        width: 100%;
         padding: 28px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --text: #fff;
+            --card: #2d2d2d;
+            --muted: #a1a1aa;
+        }
     }
 
     .card {
@@ -92,14 +113,16 @@
     }
 
     h1 {
+        color: var(--text);
         margin: 0 0 16px
     }
 
     .muted {
-        color: var(--muted)
+        color: var(--muted);
     }
 
     .field {
+        color: var(--text);
         display: flex;
         flex-direction: column;
         gap: 6px
@@ -127,10 +150,37 @@
         color: white;
     }
 
+    .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        /*flex-wrap: wrap;*/
+        gap: 10px
+    }
+
+    .caja {
+        background-color: var(--text);
+        width: 100%;
+        height: 20px;
+    }
+
     button:hover {
         background-color: var(--ring);
     }
+    /*si with es mayor a 768px */
 
+    @media (min-width: 768px) {
+        .container {
+            width: 500px;
+        }
+
+        .contenedor-cajas {
+            flex-direction: row;
+        }
+
+        .caja {
+            width: 100%;
+        }
+    }
 
 </style>
 </html>
