@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Galeria con Grid</title>
+</head>
+<body>
+<h1>Galeria con Grid</h1>
+
+<div class="gallery">
+    <img src="https://picsum.photos/400/300?random=1" alt="Imagen 1" class="item">
+    <img src="https://picsum.photos/400/300?random=2" alt="Imagen 2" class="item">
+    <img src="https://picsum.photos/400/300?random=3" alt="Imagen 3" class="item">
+    <img src="https://picsum.photos/400/300?random=4" alt="Imagen 4" class="item">
+    <img src="https://picsum.photos/400/300?random=5" alt="Imagen 5" class="item">
+    <img src="https://picsum.photos/400/300?random=6" alt="Imagen 6" class="item">
+    <img src="https://picsum.photos/400/300?random=7" alt="Imagen 7" class="item">
+    <img src="https://picsum.photos/400/300?random=8" alt="Imagen 8" class="item">
+</div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #6b7280;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin: 20px
+    }
+    .item {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: scale 0.4s ease-in-out;
+        cursor: pointer;
+    }
+
+    .item:hover {
+        scale: 1.1;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+</style>
+</html>
