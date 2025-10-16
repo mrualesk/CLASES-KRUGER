@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Clase Grid - Template Areas</title>
+</head>
+<body>
+    <div class="grid-container">
+        <header>Encabezado</header>
+        <aside>Barra Lateral Izquierda</aside>
+        <footer>Pie de Pagina</footer>
+        <main>Contenido Principal</main>
+        <div class="aside-right">Barra Lateral Derecha</div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+    }
+    .grid-container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 200px 1fr 100px;
+        grid-template-rows: 80px 1fr 60px;
+
+        grid-template-areas:
+        "header-area header-area header-area"
+        "sidebar-area main-area sidebar-right-area"
+        "footer-area footer-area footer-area";
+    }
+
+    header {
+        grid-area: header-area;
+        background-color: #3498db;
+    }
+    aside {
+        grid-area: sidebar-area;
+        background-color: #2ecc71;
+    }
+    main {
+        grid-area: main-area;
+        background-color: #e74c3c;
+    }
+    footer {
+        grid-area: footer-area;
+        background-color: #9b59b6;
+    }
+    .aside-right {
+        grid-area: sidebar-right-area;
+        background-color: #f1c40f;
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+            "header-area"
+            "main-area"
+            "footer-area"
+        }
+        .aside-right {
+            grid-area: unset;
+            display: none;
+        }
+        aside {
+            grid-area: unset;
+            display: none;
+        }
+    }
+
+</style>
+</html>
