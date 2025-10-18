@@ -17,12 +17,45 @@ function promedioNotas(notas) {
 // y mayúsculas/minúsculas**.
 
 // PISTAS
-const palindromo = "Anita lava la tina"
+const palindromo = "hola"
 const palindromoEnMinusculas = palindromo.toLowerCase();
 console.log({palindromoEnMinusculas})
 const palindromoSinEspacios = palindromoEnMinusculas.replaceAll(" ", "");
 console.log({palindromoSinEspacios})
 console.log("Primera letra del palindromo " + palindromo[0])
+
+const esPalindromo = (texto) => {
+    texto = texto.toLowerCase().replaceAll(" ", "")
+    let invertido = "";
+    for (let i = texto.length - 1; i >= 0; i--) {
+        invertido += texto[i];
+    }
+    if (texto === invertido) {
+        console.log("ES PALINDROMO")
+    } else {
+        console.log("NO ES PALINDROMO")
+    }
+}
+
+esPalindromo("Anita lava la tina")
+esPalindromo("hola")
+
+// usas 3 signos "===" cuando el valor y el tipo son iguales
+
+if ("1" === "1") {
+    console.log("ESTO ES IGUAL")
+} else {
+    console.log("ESTO NO IGUAL")
+}
+
+// usas 2 signos "==" cuando el valor es igual sin inportar el tipo
+if (1 == "1") {
+    console.log("ESTO ES IGUAL")
+} else {
+    console.log("ESTO NO IGUAL")
+}
+
+
 
 
 
