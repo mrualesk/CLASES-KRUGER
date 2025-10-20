@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<div class="contenedor">
+    <main>
+            <section class="fb_container">
+                <div class="fb_title">
+                    <img src="facebook.svg" alt="facebook icono" width="300">
+                    <span>Facebook helps you connect and share with the people in your life.</span>
+                </div>
+                <div class="contenedor-card">
+                    <div class="card">
+                        <input type="text" placeholder="Email address"/>
+                        <input type="password" placeholder="Password"/>
+                        <button class="btn btn_login">Log in</button>
+                        <a href="#">Forgotten password?</a>
+                        <hr>
+                        <button class="btn btn_create">Create new account</button>
+                    </div>
+                    <span> <strong>Create a Page</strong> for a celebrity, brand or business.</span>
+                </div>
+            </section>
+    </main>
+    <footer>
+    <ul>
+        <li>English (UK)</li>
+        <li>Español</li>
+        <li>Italiano</li>
+    </ul>
+    </footer>
+</div>
+
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f2f4f7;
+    }
+
+    .contenedor {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px;
+        grid-template-areas:
+                "main"
+                "footer";
+    }
+    .contenedor-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       gap: 30px
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        background-color: white;
+        grid-area: footer;
+    }
+
+
+    .fb_container {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fb_title {
+        width: 548px;
+        display: flex;
+        font-size: 32px;
+        flex-direction: column;
+    }
+    .fb_title > span {
+        margin-left: 24px;
+    }
+
+    .card {
+        background-color: white;
+        text-align: center;
+        width: 396px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        gap: 8px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .card > input {
+        padding: 14px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .card > a {
+        margin-top: 10px;
+        color: #0866ff;
+        text-decoration: none;
+    }
+
+    .btn {
+        padding: 14px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .btn_login {
+        background-color: #0866ff;
+    }
+    .btn_create {
+        width: fit-content;
+        background-color: #42b72a;
+        align-self: center;
+    }
+
+
+    @media (max-width: 768px) {
+        .fb_container {
+            flex-direction: column;
+        }
+        .fb_title {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+
+</style>
+</html>
