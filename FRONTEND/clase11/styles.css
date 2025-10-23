@@ -1,0 +1,41 @@
+@import "colors.css";
+
+.card {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    color: white;
+
+    .title {
+        color: var(--secondary-color);
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 8px;
+
+        &:hover {
+            background-color: #2563eb;
+        }
+
+        &:active {
+            background: #22c55e;
+        }
+    }
+
+    button:hover {
+        background-color: #2563eb;
+    }
+
+    button:active {
+        background: #22c55e;
+    }
+}
