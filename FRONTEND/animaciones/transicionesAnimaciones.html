@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Transiciones</title>
+</head>
+<body>
+<h1>Transiciones Y Animaciones</h1>
+<div style="display: flex;">
+    <ul>
+        <h2>Transiciones</h2>
+        <li>Cambian de estado con una accion: hover</li>
+        <li><strong>Etapas:</strong> Inicio, Fin</li>
+        <li><strong>Usos tipicos: </strong> cambios de color, tamano
+        posicion al pasar el mouse, etc.
+        </li>
+    </ul>
+    <ul>
+        <h2>Animaciones</h2>
+        <li>Las animaciones se ejecutan automaticamente</li>
+        <li><strong>Etapas:</strong> Pueden tener muchas etapas: (0%, 10%, ..., 100%)</li>
+        <li><strong>Usos tipicos: </strong> Crear efectos continuos o complejos
+            como rebotes, escritura, loaders
+        </li>
+    </ul>
+</div>
+
+<h3>Ejemplos</h3>
+<p>Transiciones</p>
+
+<button class="trans-btn">Pasa el mouse</button>
+
+<h3>Ejemplos</h3>
+<p>Animaciones</p>
+
+<div class="anim-ball"></div>
+
+</body>
+<style>
+    body {
+        padding: 20px;
+    }
+    .trans-btn {
+        background-color: #3b82f6;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: all 0.5s ease;
+        /*transition: background-color 0.5s ease, transform 0.5s ease;*/
+    }
+
+    .trans-btn:hover {
+        background-color: #2563eb;
+        transform: scale(1.1) translateX(-10px);
+    }
+    .trans-btn:active {
+        background-color: #22c55e;
+        transform: translateX(10px);
+    }
+
+    .anim-ball {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #9d9dd1;
+        margin: 30px auto;
+        /*animation-name: rebota;*/
+        /*animation-duration: 2s;*/
+        /*animation-timing-function: ease-in-out;*/
+        /*animation-delay: 0s;*/
+        /*animation-iteration-count: infinite;*/
+
+        animation: cambioColor 2s infinite, rebota 2s infinite;
+
+    }
+
+    @keyframes rebota {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(60px);
+        }
+        100% {
+            transform: translateY(0)
+        }
+    }
+
+    @keyframes cambioColor {
+        0% {
+            background-color: #8c5252;
+        }
+        50% {
+            background-color: #9d9dd1;
+        }
+        100% {
+            background-color: #8c5252;
+        }
+    }
+
+
+
+
+
+</style>
+
+</html>

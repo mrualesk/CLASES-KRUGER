@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Animacion del scroll</title>
+</head>
+<body>
+<h1>Animacion del scroll</h1>
+
+<section>
+    <h1>Dezplazate hacia abajo</h1>
+    <div class="scroll-box"></div>
+    <p>...mas contenido...</p>
+</section>
+</body>
+<style>
+    body {
+        height: 200vh;
+        background: linear-gradient(#f0f9ff, #603d3d);
+        text-align: center;
+    }
+    .scroll-box {
+        width: 100px;
+        height: 100px;
+        background-color: #2563eb;
+        border-radius: 16px;
+        margin: 200px auto;
+        animation: mover 2s linear both;
+        animation-timeline: scroll();
+    }
+
+    @keyframes mover {
+        from {
+            transform: translateY(100px)
+            rotate(0deg);
+            opacity: 0.3;
+        }
+        to {
+            transform: translateY(-100px)
+            rotate(360deg);
+            opacity: 1;
+        }
+    }
+</style>
+</html>
