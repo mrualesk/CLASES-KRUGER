@@ -118,10 +118,84 @@ const sonTodosPares = arrayNumerosPares.every(item => item % 2 === 0)
 console.log({sonTodosPares})
 
 const usuarios = [
-    { nombre: 'Ana', edad: 25 },
-    { nombre: 'Luis', edad: 30 },
-    { nombre: 'María', edad: 17 }
+    {nombre: 'Ana', edad: 25},
+    {nombre: 'Luis', edad: 30},
+    {nombre: 'María', edad: 17}
 ];
+
+const sonMayoresDeEdad = usuarios.every(usuario => usuario.edad >= 18);
+console.log({sonMayoresDeEdad})
+
+// Metodo Sort
+
+// Comparacion de numeros
+
+const numerosParaOrdenar = [10, 2, 5];
+
+numerosParaOrdenar.sort((a, b) => a - b)
+console.log({numerosOrdenadosMenorAmayor: numerosParaOrdenar})
+
+numerosParaOrdenar.sort((a, b) => b - a)
+console.log({numerosOrdenadosMayorAmenor: numerosParaOrdenar})
+
+// 1. a = 10, b = 2
+// a - b = 8 => > 0 es positivo
+// 10 va despues del 2
+
+// 1. a = 2, b = 5
+// a - b = -3 => > 0 es negativo
+// 2 va antes del 5
+
+// Metodos que mutan al array => Hacen cambios en el array original
+// -----Inicio----
+const nombres = ['Carlos', 'Ana', 'Bea'];
+
+nombres.sort((a, b) => a.localeCompare(b))
+console.log({nombresOrdenadosAsc: nombres})
+
+nombres.sort((a, b) => b.localeCompare(a))
+console.log({nombresOrdenadosDesc: nombres})
+
+// Metodo Push => agrega un nuevo item al final del array
+nombres.push("Marcos", "Juan")
+console.log({nombres})
+// Metodo Pop => elimina el ultimo item del array
+nombres.pop()
+console.log({nombres})
+
+// Metodo Unshift => agrega un nuevo item al inicio del array
+nombres.unshift("Pedro")
+console.log({nombres})
+
+// Metodo Shift => elimina el primer item del array
+nombres.shift()
+console.log({nombres})
+// ----Fin---
+
+// Metodos para agregar elementos tanto al inicio como al final del array con spread operator
+
+const nombres2 = ['Carlos', 'Ana', 'Bea'];
+
+// Agregar elemento al inicio
+const nombresMasUnoAlInicio = ["Marcos", ...nombres2]
+console.log({nombresMasUnoAlInicio})
+const nombresMasUnoAlFinal = [...nombresMasUnoAlInicio, "Pedro"]
+console.log({nombresMasUnoAlFinal})
+
+
+
+// Metodo Includes
+
+const haveCarlos = nombres.includes(`Carlos`)
+console.log({haveCarlos})
+
+
+
+
+
+
+
+
 
 
 
