@@ -1,7 +1,9 @@
 import {useState} from "react";
 
 export default function Nombre({nombreInicial = "Marcos"}) {
+    // useState es un manejador de estado
     const [nombre, setNombre] = useState(nombreInicial);
+    // const [precio, setPrecio] = useState(0);
 
     return (
         <>
@@ -11,3 +13,4 @@ export default function Nombre({nombreInicial = "Marcos"}) {
         </>
     )
 }
+
