@@ -8,3 +8,6 @@ const peliculas = [
     { titulo: "Titanic", año: 1997, duracion: 194, genero: "Drama", visto: true },
     { titulo: "Avengers", año: 2012, duracion: 143, genero: "Acción", visto: false }
 ];
+
+//1. MAP - Crear un array solo con los títulos
+// Crea un nuevo array que contenga únicamente los títulos de todas las películas.
