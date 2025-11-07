@@ -42,3 +42,7 @@ console.log({promedio})
 const cursos = estudiantes.map(estudiante => estudiante.curso);
 const hayCursoReacr = cursos.includes("React")
 console.log({hayCursoReacr})
+
+
+
+
