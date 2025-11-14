@@ -4,6 +4,7 @@ import Contador from "./components/Contador.jsx";
 import {Fragment} from "react";
 import {AgregarElemento} from "./components/AgregarElemento.jsx";
 import EjemploStateMultiPropiedad from "./components/EjemploStateMultiPropiedad.jsx";
+import ListaElementos from "./components/ListaElementos.jsx";
 
 function App() {
     // Un elemento JSX O TSX solo puede devolver un nodo
@@ -11,9 +12,9 @@ function App() {
 
     return (
         <Fragment>
-
+            <ListaElementos/>
             {/*<AgregarElemento/>*/}
-            <EjemploStateMultiPropiedad/>
+            {/*<EjemploStateMultiPropiedad/>*/}
             {/*<h1>Hola Mundo</h1>*/}
             {/*<Nombre/>*/}
             {/*<Nombre nombreInicial="Juan"/>*/}
