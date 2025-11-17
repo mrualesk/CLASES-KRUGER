@@ -51,7 +51,6 @@ export default function ListaElementos() {
     }
 
     useEffect(() => {
-
         const estudiantesBuscados = estudiantes.filter(estudiante => estudiante.nombre.includes(buscar))
         setEstudiantes(estudiantesBuscados)
 

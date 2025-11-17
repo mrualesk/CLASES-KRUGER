@@ -13,6 +13,10 @@ class Libro {
     devolver() {
         this.prestado = false
     }
+
+    imprimir() {
+        console.log(`Titulo: ${this.titulo}, Anio: ${this.anio}, Prestado: ${this.prestado ? "Si" : "No"}`)
+    }
 }
 
 class Biblioteca {
@@ -49,8 +53,26 @@ class Biblioteca {
     listarLibros() {
         console.log("Listado de libros")
         this.libros.forEach(libro => {
-            console.log(`Titulo: ${libro.titulo}, Anio: ${libro.anio}, Prestado: ${libro.prestado ? "Si" : "No"}`)
+            libro.imprimir()
         })
+    }
+
+    listarLibrosDisponibles() {
+        console.log("Listar Disponibles")
+        this.libros.forEach(libro => {
+            if (libro.prestado === false) {
+                libro.imprimir()
+            }
+        })
+    }
+
+    buscarLibro(nombre) {
+        const libroExiste = this.libros.find(libro => libro.titulo === nombre && libro.prestado === false)
+        if (libroExiste) {
+            console.log(`Libro Encontrado: ${nombre}`)
+        } else {
+            console.log(`No se encontro el libro: ${nombre}`)
+        }
     }
 }
 
@@ -70,9 +92,10 @@ biblioteca.prestarLibro("1984")
 
 biblioteca.listarLibros()
 
-biblioteca.devolverLibro("1984")
+biblioteca.listarLibrosDisponibles()
 
-biblioteca.listarLibros()
+biblioteca.buscarLibro("1984")
+
 
 
 
