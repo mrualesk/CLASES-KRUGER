@@ -21,6 +21,8 @@ const estudiantesInicial = [
 export default function ListaElementos() {
 
     const [estudiantes, setEstudiantes] = useState(estudiantesInicial)
+    const [estudiantesFiltrados, setEstudiantesFiltrados] = useState([])
+
     const [nuevoNombre, setNuevoNombre] = useState("")
 
     const [buscar, setBuscar] = useState("")
@@ -28,6 +30,7 @@ export default function ListaElementos() {
 
     const onChange = (evento) => {
         const valor = evento.target.value;
+        // const name = evento.target.name;
         setNuevoNombre(valor)
     }
 
@@ -51,20 +54,35 @@ export default function ListaElementos() {
     }
 
     useEffect(() => {
-        const estudiantesBuscados = estudiantes.filter(estudiante => estudiante.nombre.includes(buscar))
-        setEstudiantes(estudiantesBuscados)
+        // Ejecutate cuando el componente se monte
+        console.log("Efecto ejecutado al montar el componente")
 
-    }, [buscar]);
+    }, [])
+
+    useEffect(() => {
+        // Se ejecuta cuando el valor de las dependencias cambia en este caso con (buscar)
+        console.log("Efecto ejecutado al buscar")
+
+        if (buscar !== "") {
+
+            const estudiantesF = estudiantes.filter( estudiante => estudiante.nombre.toLowerCase().includes(buscar.toLowerCase()))
+
+            setEstudiantesFiltrados(estudiantesF)
+
+        } else {
+            setEstudiantesFiltrados(estudiantes)
+        }
+
+    }, [buscar])
 
     return (
         <div>
             <div>
-                <input onChange={onChangeBuscar} type="text" placeholder="Buscar..."/>
-
+                <input name="input-buscar" onChange={onChangeBuscar} type="text" placeholder="Buscar..."/>
             </div>
             <hr/>
             <div>
-                <input onChange={(e) => onChange(e)} type="text"/>
+                <input name="input-agregar" onChange={(e) => onChange(e)} type="text"/>
                 <button onClick={agregarNombre}>Agregar</button>
             </div>
 
@@ -72,8 +90,8 @@ export default function ListaElementos() {
 
             <ul>
                 {
-                    estudiantes.map((estudiante) => {
-                        return <li>
+                    estudiantesFiltrados.map((estudiante, index) => {
+                        return <li key={index}>
                             <span>
                                 {estudiante.nombre}
                             </span>
