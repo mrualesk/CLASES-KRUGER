@@ -48,12 +48,12 @@ export function Pokemones() {
     }
 
     return (
-        <>
-            <ul>
+        <div className="bg-[#f5f5f5] m-8">
+            <ul className="flex gap-4 flex-wrap">
                 {
-                    pokemones.map((pokemon, index) => <li key={pokemon.name + index}>{pokemon.name}</li>)
+                    pokemones.map((pokemon, index) => <li className="w-[100px] md:w-[200px] h-[150px] md:h-[250px] bg-gray-300 shadow-md rounded-md flex items-center justify-center" key={pokemon.name + index}>{pokemon.name}</li>)
                 }
             </ul>
-        </>
+        </div>
     )
 }

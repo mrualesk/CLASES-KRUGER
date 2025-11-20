@@ -1,4 +1,3 @@
-import './App.css'
 import Nombre from "./components/Nombre.jsx";
 import Contador from "./components/Contador.jsx";
 import {Fragment} from "react";
