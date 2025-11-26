@@ -1,4 +1,5 @@
 import {usePokemones} from "../hooks/usePokemones.js";
+import {Link} from "react-router";
 
 export function Pokemones() {
 
@@ -18,6 +19,7 @@ export function Pokemones() {
                             <div className="flex flex-col items-center justify-center">
                                 <img src={pokemon.image} alt={pokemon.name}/>
                                 <p>{pokemon.name}</p>
+                                <Link className="bg-black p-1 px-4 rounded-md text-white" to={`/pokemones/${pokemon.name}`}>Ver</Link>
                             </div>
                         </li>
                     )
